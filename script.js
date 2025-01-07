@@ -1,6 +1,12 @@
+window.addEventListener("keydown", (e) => {
+    if(e.key == "Enter"){
+        addTask();
+    }
+})
+
 function addTask() {
-    const task = document.getElementById("taskInput");
-    const taskText = task.value.trim();
+    const input = document.getElementById("taskInput");
+    const taskText = input.value.trim();
 
     if(taskText){
         const ul = document.getElementById("taskList");
@@ -17,9 +23,8 @@ function addTask() {
         li.append(checkbox);
         li.append(span);
 
-        task.value = "";
+        input.value = "";
     }
-
 }
 
 function finishTask() {
@@ -29,4 +34,8 @@ function finishTask() {
     for (let index = 1; index < inputList.length; index++) {
         itemsList[index-1].style.textDecoration = inputList[index].checked == true ? "line-through" : "none";   
     }
+}
+
+function removeTask(){
+    
 }
