@@ -23,15 +23,15 @@ div > button {
 
 #taskInput {
     height: 20px;
-    width: 300px;
+    width: 250px;
 }
 
 ul {
-    width: 350px;
+    width: 300px;
     margin: auto;
     text-align: left;
 }
 
-li, span{
+li > span{
     margin-left: 5px;
 }
