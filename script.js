@@ -37,5 +37,14 @@ function finishTask() {
 }
 
 function removeTask(){
+    const itemsList = document.querySelectorAll("li");
+    const spanList = document.getElementsByTagName("span");
     
+    document.addEventListener("click", (e) => {
+        for (let index = 0; index < itemsList.length; index++) {
+            if(e.target == spanList[index] && itemsList[index].firstChild.checked == true) {
+                itemsList[index].remove();
+            }
+        }
+    })
 }
